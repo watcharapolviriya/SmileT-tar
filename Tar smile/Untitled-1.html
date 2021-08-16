@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Tar's smile
+    </title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        #full-screen-background-image {
+            z-index: -999;
+            min-height: 100%;
+            min-width: 1024px;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        div.a {
+            font-size: 50px;
+            ;
+        }
+
+        div.b {
+            font-size: 60px;
+        }
+
+        div.c {
+            font-size: 70px;
+        }
+
+        input[type="checkbox"] {
+            width: 0;
+            height: 0;
+            margin: 0;
+            border: 0 none;
+            padding: 0;
+        }
+
+        input[type="checkbox"]:before {
+            content: url('non-smile.jpg');
+            display: block;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        input[type="checkbox"]:checked:before {
+            content: url('smile.jpg');
+        }
+        input[type="checkbox"]:checked:before {
+    content: url('non-smile.jpg');
+}
+    </style>
+</head>
+
+<body onclick="smile()">
+
+    <img alt="full screen background image" src="non-smile.jpg" id="full-screen-background-image">
+
+    <div id="wrapper">
+    </div>
+    <!--รูปให้เต็มเว็บ-->
+    <div style="position:absolute; top:280px;left:50px;width:200px;">
+        <!--คำอยู่ในรูป-->
+        <div class="c">Tar's smile</div>
+        <div class="b"> แต้มความสุข</div>
+        <h1 id="point"> 0 </h1>
+        <script src="app.js"></script>
+</body>
+</div>
+
+</body>
+
+</html>
